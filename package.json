@@ -1,23 +1,28 @@
 {
-  "name": "bn-landing",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^5.0.3",
-    "@tsconfig/svelte": "^5.0.4",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "svelte": "^5.15.0",
-    "svelte-check": "^4.1.1",
-    "tailwindcss": "^3.4.17",
-    "typescript": "~5.6.2",
-    "vite": "^6.0.5"
-  }
+	"name": "bn-landing",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"lint": "biome check .",
+		"format": "biome format --write ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.0",
+		"@sveltejs/adapter-cloudflare": "^7.2.6",
+		"@sveltejs/enhanced-img": "^0.9.3",
+		"@sveltejs/kit": "^2.15.2",
+		"@sveltejs/vite-plugin-svelte": "^6",
+		"@tailwindcss/vite": "^4.1.18",
+		"@types/node": "^25.0.10",
+		"svelte": "^5.15.0",
+		"svelte-check": "^4.1.1",
+		"tailwindcss": "^4.1.18",
+		"typescript": "~5.6.2",
+		"vite": "^6.0.5"
+	}
 }

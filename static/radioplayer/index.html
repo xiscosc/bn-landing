@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <title>BN MCA Radio - Escuchar online</title>
+    <meta property="og:title" content="BN MCA Radio" />
+    <meta property="og:url" content="https://bnmallorca.com" />
+    <meta
+      property="og:image"
+      content="https://bnmallorca.com/app/logo_share.jpg"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=iutf-8" />
+    <link
+      href="/rp/jpincs/jplayer.blue.monday.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript" src="/rp/jpincs/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="/rp/jpincs/jquery.jplayer.min.js"
+    ></script>
+    <script type="text/javascript">
+      //<![CDATA[
+      $(document).ready(function () {
+        var stream = {
+            title: "BN Mallorca",
+            mp3: "https://stream.recasound.es/proxy/bnmallorca/stream",
+          },
+          ready = false;
+
+        $("#jquery_jplayer_1").jPlayer({
+          ready: function (event) {
+            ready = true;
+            $(this).jPlayer("setMedia", stream);
+            $(this).jPlayer("play", 1);
+          },
+          pause: function () {
+            $(this).jPlayer("clearMedia");
+          },
+          error: function (event) {
+            if (
+              ready &&
+              event.jPlayer.error.type === $.jPlayer.error.URL_NOT_SET
+            ) {
+              // Setup the media stream again and play it.
+              $(this).jPlayer("setMedia", stream).jPlayer("play");
+            }
+          },
+          swfPath: "/rp/jpincs/jplayer",
+          supplied: "mp3",
+          preload: "none",
+          wmode: "window",
+          useStateClassSkin: true,
+          autoBlur: false,
+          keyEnabled: true,
+        });
+      });
+      //]]>
+    </script>
+    <style>
+      html {
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        height: 600px;
+      }
+      #BNplayer {
+        width: 240px;
+        height: 440px;
+        text-align: center;
+        padding: 10px;
+        border: 10px solid transparent;
+        margin: 0;
+        font-family: "Lato", Arial, "Arial Unicode MS", Helvetica, Sans-Serif;
+      }
+
+      #logo {
+        margin-bottom: 1em;
+      }
+
+      html > body > div#BNplayer > div#jp_container_1.jp-audio-stream {
+        margin: 0 auto 0 auto;
+        border-width: 0;
+        background: transparent !important;
+      }
+      .jp-audio .jp-interface,
+      .jp-audio-stream .jp-interface {
+        background: transparent !important;
+        height: 80px !important;
+      }
+
+      #separador {
+        z-index: -10;
+        left: 0;
+        margin-top: 24px;
+        position: absolute;
+      }
+
+      #songdata,
+      .cc_recenttracks_list {
+        font-size: 12px;
+      }
+      #cc_strinfo_tracktitle_bnmallorca {
+        font-weight: bold;
+      }
+
+      div#cc_recenttracks_bnmallorca.cc_recenttracks_list {
+        margin: -12px 0 0 0;
+        padding: 0;
+      }
+      div#cc_recenttracks_bnmallorca.cc_recenttracks_list
+        > div.cctrack
+        > div.ccdetails.ccdetails_withcover {
+        margin: 0;
+        padding: 0;
+      }
+      div#cc_recenttracks_bnmallorca.cc_recenttracks_list
+        > div.cctrack
+        > div.ccdetails.ccdetails_withcover
+        > div.cctitle.ccnowplaying {
+      }
+      div#cc_recenttracks_bnmallorca.cc_recenttracks_list > div.cctrack {
+        border-bottom: 0px dashed #eeeeee;
+        padding: 0;
+      }
+      div#cc_recenttracks_bnmallorca.cc_recenttracks_list
+        > div.cctrack
+        > div.cccover {
+        display: none;
+        visibility: hidden;
+      }
+
+      /* .cctrack { display:none; visibility: hidden; }
+	.cctrack ~ .cctrack { display: block; visibility: visible; } */
+
+      div#cc_recenttracks_bnmallorca > .cctrack {
+        margin-bottom: 1em;
+      }
+      div#cc_recenttracks_bnmallorca > .cctrack ~ .cctrack {
+        margin-bottom: 0.12em;
+      }
+      .cctrack .cctitle {
+        color: #000 !important;
+      }
+      .cctrack .ccartist {
+        color: #444 !important;
+      }
+      .ccalbum,
+      .ccbuy {
+        visibility: hidden;
+        display: none;
+      }
+    </style>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-57467785-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </head>
+  <body>
+    <div id="BNplayer">
+      <!-- <img src="rp/imgs/logoBN.png" alt="BN Mallorca 106.5 FM - Genuina Independencia Musical" id="logo" /> -->
+
+      <img
+        src="https://www.bnmallorca.com/app/logo_share.jpg"
+        style="width: 70%"
+      />
+
+      <script language="javascript">
+        window.centovacast = {
+          options: {
+            recenttracks: {
+              poll_limit: 60000000, // number of times to update the tracks list before stopping
+              poll_frequency: 10000, // how often (in milliseconds) to poll the server
+              track_limit: 10, // number iof tracks to display (0 to display all on file)
+              show_covers: 0, // 1 to show covers, 0 to hide
+              buy_target: "_blank", // '_blank' to open in new window, '' to open in same window
+            },
+          },
+        };
+      </script>
+
+      <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+      <div
+        id="jp_container_1"
+        class="jp-audio-stream"
+        role="application"
+        aria-label="media player"
+      >
+        <div class="jp-type-single">
+          <div class="jp-gui jp-interface">
+            <div class="jp-controls">
+              <button class="jp-play" role="button" tabindex="0">play</button>
+            </div>
+            <div class="jp-volume-controls">
+              <button class="jp-mute" role="button" tabindex="0">mute</button>
+              <button class="jp-volume-max" role="button" tabindex="0">
+                max volume
+              </button>
+              <div class="jp-volume-bar">
+                <div class="jp-volume-bar-value"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="jp-no-solution">
+            <span>Update Required</span>
+            To play the media you will need to either update your browser to a
+            recent version or update your
+            <a href="http://get.adobe.com/flashplayer/" target="_blank"
+              >Flash plugin</a
+            >.
+          </div>
+        </div>
+      </div>
+
+      <div id="cc_recenttracks_bnmallorca" class="cc_recenttracks_list">
+        Loading ...
+      </div>
+    </div>
+
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="https://stream.recasound.es/system/streaminfo.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="https://stream.recasound.es/system/recenttracks.js"
+    ></script>
+  </body>
+</html>
