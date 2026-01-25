@@ -1,6 +1,3 @@
 name = "bn-landing"
 compatibility_date = "2026-01-25"
 pages_build_output_dir = ".svelte-kit/cloudflare"
-
-[build]
-command = "bun run build"
