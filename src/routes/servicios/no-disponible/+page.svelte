@@ -13,9 +13,9 @@ import Service from "$lib/components/servicios/Service.svelte";
 <main class="bg-white">
 	<div class="flex flex-col gap-7 pb-4 pt-8">
 		<Service title="PODCAST NO DISPONIBLE" enhancedImage={image}>
-			<span>
-				El programa no está disponible en formato podcast. Puedes escucharlo en su horario habitual
-				en directo desde nuestra app
+			<span class="text-base">
+				El programa no está disponible en formato podcast.
+				<strong>Puedes escucharlo en su horario habitual</strong> en directo desde nuestra app
 			</span>
 		</Service>
 	</div>
