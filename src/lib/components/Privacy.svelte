@@ -49,7 +49,7 @@
 	<p>
 		<strong>BN MCA COMMUNICATION SLU</strong><br />
 		CIF: ESB70639042<br />
-		Dirección: Posada de Lluc, 8 Local 3, 07141 Palma, España<br />
+		Dirección: Posada de Lluc, 8 Local 3, 07001 Palma, España<br />
 	</p>
 	<h2 class="text-xl font-semibold">7. Contacto</h2>
 	<p>
