@@ -7,6 +7,9 @@ import type { Connect } from "vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+	define: {
+		__COMMIT_HASH__: JSON.stringify(process.env.CF_PAGES_COMMIT_SHA || "dev"),
+	},
 	plugins: [
 		{
 			name: "serve-static-html",

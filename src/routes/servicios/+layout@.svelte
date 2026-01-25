@@ -1,4 +1,7 @@
 <script lang="ts">
+import "../../app.css";
+import Footer from "$lib/components/Footer.svelte";
+
 let { children } = $props();
 </script>
 
@@ -7,10 +10,7 @@ let { children } = $props();
 	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
-{@render children()}
-
-<style>
-	:global(body) {
-		background-color: white;
-	}
-</style>
+<div class="min-h-screen flex flex-col bg-white">
+	{@render children()}
+	<Footer />
+</div>
