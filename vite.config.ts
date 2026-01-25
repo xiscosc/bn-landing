@@ -24,6 +24,11 @@ export default defineConfig({
 						res.end();
 						return;
 					}
+					if (req.url === "/privacy.html") {
+						res.writeHead(301, { Location: "/privacy" });
+						res.end();
+						return;
+					}
 					next();
 				});
 			},
@@ -38,6 +43,11 @@ export default defineConfig({
 					}
 					if (req.url === "/radioplayer.html") {
 						res.writeHead(301, { Location: "/radioplayer" });
+						res.end();
+						return;
+					}
+					if (req.url === "/privacy.html") {
+						res.writeHead(301, { Location: "/privacy" });
 						res.end();
 						return;
 					}
