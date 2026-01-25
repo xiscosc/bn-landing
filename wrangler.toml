@@ -1,0 +1,8 @@
+name = "bn-landing"
+compatibility_date = "2025-01-25"
+
+[build]
+command = "bun run build"
+
+[vars]
+NODE_VERSION = "22"
