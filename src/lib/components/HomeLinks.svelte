@@ -21,7 +21,7 @@ import Link from "./Link.svelte";
 	<Link
 		icon={siUnraid}
 		text="Radio Online"
-		link="/radioplayer"
+		link="/radioplayer?v=2"
 	>
 	</Link>
 
