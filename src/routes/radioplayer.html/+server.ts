@@ -1,5 +1,5 @@
 import { redirect } from "@sveltejs/kit";
 
 export function GET() {
-	redirect(301, "/radioplayer");
+	redirect(301, "/radioplayer?v=2");
 }
